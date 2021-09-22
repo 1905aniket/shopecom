@@ -1,0 +1,49 @@
+     
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+     <div class="contianer">
+     <div class="row">
+          <div class="col-md-12 offset-md-0">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+  <a class="navbar-brand">
+    <img src="/assets/img/wlogo.png" width="200" height="50" class="d-inline-block align-top" alt="">
+  </a>
+  <form class="form-inline  col-md-3 offset-md-2 ">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
+  </form>
+   
+  
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      &#9776;
+    </button>
+  
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav col-md-6 offset-md-2">
+        <li class="nav-item active">
+           <a class="nav-link" routerLink="/" (click)="isMenuCollapsed = true"><i class="fa fa-shopping-bag fa-2x"></i>Home</a>
+        </li>
+        <li class="nav-item active">
+          <!-- Step 4: Close the menu when a link is clicked. -->
+          <a class="nav-link" routerLink="/Register" (click)="isMenuCollapsed = true"> <i class="fa fa-user-plus fa-2x"></i>Register</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/login" (click)="isMenuCollapsed = true"><i class="fa fa-user-circle fa-2x"></i>Login</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true"><i class="fa fa-share-square fa-2x"></i>About</a>
+        </li>
+        <a class="navbar-brand col-md-3s offset-md-5">
+          <i class="fa fa-cart-plus" style="font-size:50px;color:white; "></i>
+         
+        </a>
+      </ul>
+    </div>
+  </nav>
+ </div>
+</div>
+</div>    
+        
+  

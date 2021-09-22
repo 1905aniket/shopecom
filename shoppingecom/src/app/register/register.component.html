@@ -1,0 +1,78 @@
+<main class="p-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <div class="card">
+                  <div class="card-header primary-background text-white text-center">
+                      <span class="fa fa-3x fa-user-circle-o"></span>
+                      <br>
+                      <p>Register Here</p>
+                  </div>
+                      <div class="card-body">
+                          <form [formGroup] = "registerForm" >
+  <div class="form-group">
+<label for="user-name">First Name</label>
+<input name="user_id" formControlName="firstName" class="form-control" id="user-name" aria-describedby="emailHelp" placeholder="Enter First Name">
+<div *ngIf="firstName.invalid && (firstName.dirty|| firstName.touched)"
+                             class="alert alert-danger mt-1">
+                            
+                         <div *ngIf="firstName.errors.required || firstName.errors.noWhiteSpaces">
+                               First Name is required
+                         </div>
+        
+                     <div *ngIf="firstName.errors.minlength">
+                            First Name at least 2 character long 
+                      </div>
+                      <div *ngIf="firstName.errors.maxlength">
+                        First Name at least 12 character long 
+                  </div>
+                          </div>
+                      
+</div>
+<div class="form-group">
+  <label for="user-name">Last Name</label>
+  <input name="user_id" formControlName="lastName" class="form-control" id="user-name" aria-describedby="emailHelp" placeholder="Enter Last Name">
+  <div *ngIf="lastName.invalid && (lastName.dirty|| lastName.touched)"
+  class="alert alert-danger mt-1">
+ 
+<div *ngIf="lastName.errors.required || lastName.errors.noWhiteSpaces">
+    Last Name is required
+</div>
+
+<div *ngIf="lastName.errors.minlength">
+ Last Name at least 2 character long 
+</div>
+<div *ngIf="lastName.errors.maxlength">
+Last Name at least 12 character long 
+</div>
+</div>  
+</div>
+<div class="form-group">
+  <label for="gender">Select Gender</label>
+  <br>
+  <input type="radio" id="gender" name="gender" required value="Male">Male
+  <input type="radio" id="gender" name="gender" required value="Female">Female
+  </div>
+                        
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input name="user_emailid" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input name="user_password" required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+</div>
+
+
+
+<div class="text-center">
+<button id="submit-btn" type="submit" class="btn btn-primary ">Submit</button>
+</div>
+</form>
+                      </div>
+              </div>
+                  </div>
+              </div>
+          </div>
+      
+</main>
